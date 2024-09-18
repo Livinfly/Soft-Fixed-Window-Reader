@@ -1,0 +1,7 @@
+.venv
+.vscode
+build
+dist
+main.spec
+note.txt
+main.exe
