@@ -1,4 +1,4 @@
-import os
+Kllddimport os
 
 proxies = {
     'http': 'http://127.0.0.1:7896',
@@ -32,6 +32,7 @@ def keyboard_init():
     keyboard.add_hotkey('d', work)
     keyboard.add_hotkey('f', translate)
     keyboard.add_hotkey('pause', pause)
+    keyboard.add_hotkey('shift+p', pause)
 
 # 定位
 def locate():
@@ -78,7 +79,7 @@ def TTS_init():
 # 位置预处理
 def location_init():
     global p1, p2, locating_mode
-    print('进入重新定位模式，按 L 键获取阅读窗口的左上角和右下角')
+    print('进入定位模式，按 L 键获取阅读窗口的左上角和右下角')
     p1, p2 = (-1, -1), (-1, -1)  # 重置坐标
     locating_mode = True  # 开启定位模式
 
@@ -117,7 +118,7 @@ if __name__ == '__main__':
     print('程序正在初始化')
     keyboard_init()
     TTS_init()
-    print('程序运行中，按 D 键进行阅读，按 F 键显示翻译，按 shift-K 进行定位或重新定位，按 Pause 键暂停') 
+    print('程序运行中，按 D 键进行阅读，按 F 键显示翻译，按 shift-K 进行定位或重新定位，按 Pause / shift-P 键暂停') 
     print('若想关闭程序，请直接关闭。')
     print('请按 shift-K 进行首次定位')
     keyboard.wait()
