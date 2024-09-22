@@ -1,4 +1,4 @@
-Kllddimport os
+import os
 
 proxies = {
     'http': 'http://127.0.0.1:7896',
